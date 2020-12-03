@@ -2,6 +2,72 @@
   margin: 0;
   padding: 0;
 }
+#page {
+  width: 412px;
+  height: 100%;
+  position: absolute;
+  left: 557px;
+  top: 82px;
+  transform-origin: 0 0;
+  opacity: 1;
+  z-index: 1;
+  background: url(images/deck/screen_5/spreads-2-x@2x_left.png) no-repeat;
+  transform: rotateY(0deg);
+  transition-duration: 0s;
+}
+#pageRight {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 559px;
+  top: 94px;
+  background: url(images/deck/screen_5/spreads-2-x@2x_right.png) no-repeat;
+}
+.book_close_bg {
+  position: absolute;
+  right: 210px;
+  top: 88px;
+  transform: rotateY(0);
+  transition-duration: 0;
+  transform-origin: 0 0;
+  width: 430px;
+  z-index: 3;
+  opacity: 1;
+  height: 590px;
+  cursor: pointer;
+  background-size: 104%;
+  background: url(images/deck/screen_4/book-q-2-2-x@2x.png) no-repeat center center;
+}
+.book_close_bg:hover {
+  transform: scale(1.3s) !important;
+}
+.back-portal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0;
+  opacity: 0;
+  background: url(images/deck/screen_5/portal@2x.png) no-repeat center center;
+}
+.width {
+  width: 0 !important;
+}
+.page-play {
+  transform: rotateY(-180deg) !important;
+  transition-duration: 1s !important;
+  width: 574px !important;
+}
+.book-play {
+  transform: rotateY(-180deg) !important;
+  transition-duration: 1.3s !important;
+}
+.book-opasity {
+  opacity: 0 !important;
+  transition-duration: 1s !important;
+}
+.book-transform {
+  right: 400px !important;
+}
 .none {
   display: none !important;
 }
@@ -20,10 +86,14 @@
   background-size: cover;
 }
 .table-screen5 {
-  background: url(images/deck/screen_5/portal@3x.png) no-repeat center center;
-  background-size: cover;
+  background-size: 30%;
+}
+.transparent {
+  transition-duration: 1.4s !important;
+  opacity: 0 !important;
 }
 .opacity {
+  transition-duration: 1s !important;
   opacity: 1 !important;
 }
 .answer_number_active {
@@ -60,8 +130,6 @@
 .main .books {
   height: 100%;
   width: 100%;
-  background-position: 175px 92px;
-  background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat center center;
 }
 .main .table_close {
   display: flex;
@@ -71,44 +139,42 @@
   width: 100%;
   height: 100%;
 }
-.main .table_close .book_close {
-  transform: rotateY(0);
-  transition-duration: 5s;
-  width: 430px;
-  height: 590px;
-  cursor: pointer;
-  transition: 0.3s;
-  background: url(images/deck/screen_4/book-q-2-2-x@2x.png) no-repeat center center;
-}
-.main .table_close .book_close:hover {
-  transform: scale(1.03);
-}
 .main .table_close .clock {
   align-items: flex-end;
 }
 .main .tabele_open {
-  width: 100%;
+  width: 1200px;
   height: 100%;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 50px;
 }
-.main .tabele_open .book_open {
+.main .tabele_open .bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.main .tabele_open .bg .book_open {
+  position: relative;
+  left: 152px;
+  top: 93px;
   width: 830px;
   height: 565px;
   z-index: 1;
+  background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat center center;
 }
-.main .tabele_open .book_open .question_1,
-.main .tabele_open .book_open .question_2 {
+.main .tabele_open .bg .book_open .question_1,
+.main .tabele_open .bg .book_open .question_2 {
+  opacity: 0;
+  transition-duration: 0;
   display: flex;
 }
-.main .tabele_open .book_open .question_1 .part-left,
-.main .tabele_open .book_open .question_2 .part-left {
+.main .tabele_open .bg .book_open .question_1 .part-left,
+.main .tabele_open .bg .book_open .question_2 .part-left {
   width: 50%;
   position: relative;
 }
-.main .tabele_open .book_open .question_1 .part-left .chapter,
-.main .tabele_open .book_open .question_2 .part-left .chapter {
+.main .tabele_open .bg .book_open .question_1 .part-left .chapter,
+.main .tabele_open .bg .book_open .question_2 .part-left .chapter {
   position: absolute;
   display: block;
   left: 30px;
@@ -118,20 +184,20 @@
   background: url(images/deck/screen_5/chapter.png) no-repeat 50% 50%;
   background-size: 100% 100%;
 }
-.main .tabele_open .book_open .question_1 .part-left .line-question,
-.main .tabele_open .book_open .question_2 .part-left .line-question {
+.main .tabele_open .bg .book_open .question_1 .part-left .line-question,
+.main .tabele_open .bg .book_open .question_2 .part-left .line-question {
   position: relative;
   display: block;
   left: 107px;
 }
-.main .tabele_open .book_open .question_1 .part-left .arrow,
-.main .tabele_open .book_open .question_2 .part-left .arrow {
+.main .tabele_open .bg .book_open .question_1 .part-left .arrow,
+.main .tabele_open .bg .book_open .question_2 .part-left .arrow {
   position: relative;
   display: block;
   left: 245px;
 }
-.main .tabele_open .book_open .question_1 .part-left .banana,
-.main .tabele_open .book_open .question_2 .part-left .banana {
+.main .tabele_open .bg .book_open .question_1 .part-left .banana,
+.main .tabele_open .bg .book_open .question_2 .part-left .banana {
   position: absolute;
   display: block;
   left: 190px;
@@ -142,8 +208,8 @@
   background-position-y: bottom !important;
   background: url(images/deck/screen_5/question_monkey_d.png) no-repeat center;
 }
-.main .tabele_open .book_open .question_1 .part-left .step,
-.main .tabele_open .book_open .question_2 .part-left .step {
+.main .tabele_open .bg .book_open .question_1 .part-left .step,
+.main .tabele_open .bg .book_open .question_2 .part-left .step {
   position: absolute;
   display: block;
   left: 29px;
@@ -153,41 +219,41 @@
   background: url(images/deck/screen_5/step1.png) no-repeat 50% 50%;
   background-size: 100% 100%;
 }
-.main .tabele_open .book_open .question_1 .part-right,
-.main .tabele_open .book_open .question_2 .part-right {
+.main .tabele_open .bg .book_open .question_1 .part-right,
+.main .tabele_open .bg .book_open .question_2 .part-right {
   position: relative;
   width: 50%;
 }
-.main .tabele_open .book_open .question_1 .part-right .line-answer,
-.main .tabele_open .book_open .question_2 .part-right .line-answer {
+.main .tabele_open .bg .book_open .question_1 .part-right .line-answer,
+.main .tabele_open .bg .book_open .question_2 .part-right .line-answer {
   position: relative;
   top: 125px ;
   left: 40px;
 }
-.main .tabele_open .book_open .question_1 .part-right h4,
-.main .tabele_open .book_open .question_2 .part-right h4 {
+.main .tabele_open .bg .book_open .question_1 .part-right h4,
+.main .tabele_open .bg .book_open .question_2 .part-right h4 {
   top: 130px;
   left: 40px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer,
-.main .tabele_open .book_open .question_2 .part-right .answer {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer {
   width: 100%;
   height: 300px;
   position: relative;
   top: 130px;
   left: 40px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items,
-.main .tabele_open .book_open .question_2 .part-right .answer-items {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items {
   position: relative;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item {
   position: relative;
   display: inline-block;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -195,32 +261,32 @@
   margin-right: 30px;
   margin-bottom: 10px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask2,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask2 {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask2,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask2 {
   position: absolute;
   display: block;
   width: 23%;
   left: 25px;
   top: 28px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask3,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask3 {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask3,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask3 {
   position: absolute;
   display: block;
   width: 37%;
   left: 38px;
   top: -5px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask5,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask5 {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .mask5,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .mask5 {
   position: absolute;
   display: block;
   width: 22%;
   left: 67px;
   top: 13px;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-choose,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-choose {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-choose,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-choose {
   position: absolute;
   display: block;
   left: 0;
@@ -234,12 +300,12 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-choose:hover,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-choose:hover {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-choose:hover,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-choose:hover {
   opacity: 1;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-zoom,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-zoom {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-zoom,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-zoom {
   position: absolute;
   display: block;
   left: 0;
@@ -253,12 +319,12 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-zoom:hover,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-zoom:hover {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .item-image .answer-zoom:hover,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .item-image .answer-zoom:hover {
   opacity: 1;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .answer-rama,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .answer-rama {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .answer-rama,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .answer-rama {
   position: absolute;
   display: block;
   width: 162px;
@@ -270,8 +336,8 @@
   pointer-events: none;
   opacity: 0;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-items .answer-item .answer-number,
-.main .tabele_open .book_open .question_2 .part-right .answer-items .answer-item .answer-number {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-items .answer-item .answer-number,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-items .answer-item .answer-number {
   position: absolute;
   display: block;
   width: 26px;
@@ -285,8 +351,8 @@
   text-align: center;
   font-weight: 500;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-btn-question_1,
-.main .tabele_open .book_open .question_2 .part-right .answer-btn-question_1 {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-btn-question_1,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-btn-question_1 {
   position: relative;
   display: block;
   left: 145px;
@@ -295,8 +361,8 @@
   height: 37px;
   cursor: pointer;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-btn-question_1 .answer-btn-img,
-.main .tabele_open .book_open .question_2 .part-right .answer-btn-question_1 .answer-btn-img {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-btn-question_1 .answer-btn-img,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-btn-question_1 .answer-btn-img {
   position: absolute;
   display: block;
   left: 0px;
@@ -307,8 +373,8 @@
   background-size: 100% 100%;
   opacity: 1;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-btn-question_1 .answer-btn-hover,
-.main .tabele_open .book_open .question_2 .part-right .answer-btn-question_1 .answer-btn-hover {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-btn-question_1 .answer-btn-hover,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-btn-question_1 .answer-btn-hover {
   position: absolute;
   display: block;
   left: 0px;
@@ -320,8 +386,8 @@
   opacity: 0;
   transition: 0.3s;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer-btn-question_1 span,
-.main .tabele_open .book_open .question_2 .part-right .answer-btn-question_1 span {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer-btn-question_1 span,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer-btn-question_1 span {
   position: absolute;
   display: block;
   z-index: 1;
@@ -332,27 +398,62 @@
   font-size: 18px;
   font-weight: 600;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer .answer-btn-question_1:hover .answer-btn-img,
-.main .tabele_open .book_open .question_2 .part-right .answer .answer-btn-question_1:hover .answer-btn-img {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer .answer-btn-question_1:hover .answer-btn-img,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer .answer-btn-question_1:hover .answer-btn-img {
   opacity: 0;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer .answer-btn-question_1:hover .answer-btn-hover,
-.main .tabele_open .book_open .question_2 .part-right .answer .answer-btn-question_1:hover .answer-btn-hover {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer .answer-btn-question_1:hover .answer-btn-hover,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer .answer-btn-question_1:hover .answer-btn-hover {
   opacity: 1;
 }
-.main .tabele_open .book_open .question_1 .part-right .answer .answer-btn-question_1:hover span,
-.main .tabele_open .book_open .question_2 .part-right .answer .answer-btn-question_1:hover span {
+.main .tabele_open .bg .book_open .question_1 .part-right .answer .answer-btn-question_1:hover span,
+.main .tabele_open .bg .book_open .question_2 .part-right .answer .answer-btn-question_1:hover span {
   color: #fff;
 }
-.main .tabele_open .book_open .question_1 .part-right .help-mark,
-.main .tabele_open .book_open .question_2 .part-right .help-mark {
+.main .tabele_open .bg .book_open .question_1 .help-mark-active,
+.main .tabele_open .bg .book_open .question_2 .help-mark-active {
+  background-image: url(images/deck/screen_5/help_mask.png) !important;
+}
+.main .tabele_open .bg .book_open .question_1 #q1-video,
+.main .tabele_open .bg .book_open .question_2 #q1-video {
   position: absolute;
   display: block;
-  right: 18px;
+  right: 0;
+  top: 0;
+  width: 399px;
+  height: auto;
+}
+.main .tabele_open .bg .book_open .question_1 .help-active,
+.main .tabele_open .bg .book_open .question_2 .help-active {
+  width: 400px !important;
+  height: 400px !important;
+  z-index: 20;
+}
+.main .tabele_open .bg .book_open .question_1 .help,
+.main .tabele_open .bg .book_open .question_2 .help {
+  position: absolute;
+  display: block;
+  right: 14px;
   top: 10px;
+  width: 120px;
+  height: 120px;
+  background: url(images/deck/screen_5/page_ugol.png) no-repeat 50% 50%;
+  transition: all 500ms ease-in-out;
+  background-size: 100% 100%;
+  pointer-events: painted;
+  z-index: 2;
+}
+.main .tabele_open .bg .book_open .question_1 .help-mark,
+.main .tabele_open .bg .book_open .question_2 .help-mark {
+  position: absolute;
+  display: block;
+  pointer-events: painted;
+  right: 0;
+  top: 0;
+  z-index: 1;
   width: 107px;
   height: 107px;
-  background: url(images/deck/screen_5/corner@2x.png) no-repeat 50% 50%;
+  background: url(images/deck/screen_5/help_btn.png) no-repeat 50% 50%;
   background-size: 100% 100%;
   cursor: pointer;
 }
@@ -401,45 +502,14 @@
   margin-bottom: 10px;
   font-weight: 300px;
 }
-.main #page {
-  width: 0;
-}
-.main .width {
-  width: 0 !important;
-}
-.main .play {
-  width: 100px !important;
-  position: absolute;
-  transition-duration: 0s;
-  transition-delay: 0s;
-  transform: rotateY(0deg);
-  z-index: 100;
-  left: 172px;
-  top: 87px;
-  height: 100%;
-  width: 100%;
-  background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat;
-}
-.main .play2 {
-  width: 100% !important;
-  height: 100%;
-  position: absolute;
-  right: 202px;
-  top: 92px;
-  transition-duration: 1s;
-  transition-delay: 0s;
-  transform: rotateY(-180deg);
-  z-index: 1;
-  background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat;
-}
-.main .book-play {
-  transform: rotateY(-180deg) !important;
-  transition-duration: 2s !important;
+.main .mainClock {
+  left: 0 !important;
 }
 .main .clock {
   width: 200px;
   height: 590px;
   bottom: 0;
+  left: 200px;
   align-self: flex-end;
   position: relative;
   background: url(images/deck/screen_4/watch-2-x@2x.png) no-repeat bottom center;

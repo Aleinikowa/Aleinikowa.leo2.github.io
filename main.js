@@ -1,25 +1,41 @@
 //screen 5 
-let bookClose = document.getElementsByClassName('book_close')[0],
+let bookClose = document.getElementsByClassName('book_close_bg')[0],
     tableClose = document.getElementsByClassName('table_close')[0],
     blockBooks = document.getElementsByClassName('books')[0],
     page = document.getElementById('page'),
-    tabeleOpen = document.getElementsByClassName('tabele_open')[0];
+    pageRight = document.getElementById('pageRight'),
+    backPortal = document.getElementsByClassName('back-portal')[0],
+    tabeleOpen = document.getElementsByClassName('tabele_open')[0],
+    blockQuestion_1 = document.querySelector('.question_1'),
+    blockQuestion_2 = document.querySelector('.question_2');
 
 bookClose.addEventListener('click', ()=> {
     
     setTimeout(()=> bookClose.classList.add('book-play'), 100);
-    setTimeout(()=> bookClose.classList.add('width'), 300);
+    setTimeout(()=> bookClose.classList.add('book-opasity'), 200);
 
-    page.classList.remove('none');
-    setTimeout(()=> page.classList.add('play2'), 400);
-    // setTimeout(()=> page.classList.add('none'), 1000);
+    setTimeout(()=> page.classList.remove('none'), 700);
+    setTimeout(()=> pageRight.classList.remove('none'), 200);
 
-    setTimeout(()=> tableClose.classList.add('none'), 700);
-    setTimeout(()=> blockBooks.classList.add('table-screen5'), 800);
-    setTimeout(()=> tabeleOpen.classList.add('scale'), 1000);
-    setTimeout(()=> tabeleOpen.classList.remove('none'), 1000);
-    setTimeout(()=> tabeleOpen.classList.add('flex'), 1100);
+    setTimeout(()=> page.style.left = '554px', 100);
 
+
+    setTimeout(()=> page.classList.add('page-play'), 100);
+    // setTimeout(()=> page.classList.add('transparent'), 400);
+
+    // setTimeout(()=> backPortal.classList.add('opacity'), 1000);
+
+
+
+    setTimeout(()=> tableClose.classList.add('none'), 500);
+
+    setTimeout(()=> tabeleOpen.classList.remove('none'), 500);
+    setTimeout(()=> tabeleOpen.classList.add('flex'), 500);
+
+    setTimeout(()=> blockQuestion_1.classList.add('opacity'), 700);
+
+
+    setTimeout(()=> page.classList.remove('page-play'), 1300);
 
 
     // tableClose.classList.add('none');
@@ -35,7 +51,20 @@ let answerBlock = document.querySelector(".answer"),
     blockZoom = document.querySelector('.arm-block'),
     blockArm = document.querySelector('.arm'),
     close = document.querySelector('.close'),
+    partRight = document.querySelector('.book_open'),
+    helpMark = document.querySelector('.help-mark'),
+    help = document.querySelector('.help');
     t = 0;
+
+    // partRight.addEventListener('click', (event)=> {
+    //     let target = event.target;
+    //     console.log(target)
+    //     if (target.classList.contains('help-mark')) {
+    //         help.classList.add('help-active');
+    //         helpMark.classList.add('help-mark-active');
+    //     }
+// })    
+    
 
 answerBlock.addEventListener('click', (event)=> {
     let target = event.target;
@@ -66,6 +95,8 @@ answerBlock.addEventListener('click', (event)=> {
     }
 });
 
+
+
 close.addEventListener('click', ()=> {
     let timerIdBottom = setInterval(() => blockZoom.style.bottom = '-650px', 10);
     let timerId = setInterval(() => blockZoom.style.transform = 'rotate(-90deg)', 10);
@@ -78,10 +109,10 @@ close.addEventListener('click', ()=> {
 //btn next page 1
 let btnAnswer = document.querySelector('.answer-btn-question_1'),
     prarent = btnAnswer.parentNode,
-    blockQuestion_1 = document.querySelector('.question_1'),
-    blockQuestion_2 = document.querySelector('.question_2'),
     spanBtnAnswer = document.getElementById('answer'),
     spanBtnNext = document.getElementById('next');
+
+
 
 spanBtnAnswer.addEventListener ('click', ()=> {
         let blocksActive = prarent.getElementsByClassName('answer-item'),
@@ -130,25 +161,24 @@ spanBtnAnswer.addEventListener ('click', ()=> {
 
 spanBtnNext.addEventListener ('click', ()=> {
 
-    showNextPage();
 
-    blockQuestion_2.classList.remove('none');
-    // page.classList.remove('none');
+    blockQuestion_1.classList.add('none');
+    page.style.zIndex = '10';
+    page.classList.remove('page-play');
+    showNextPage();
 
 });
 
 
 function showNextPage() {
-    // page.classList.add('none');
-    page.classList.remove('play2');
-    page.classList.add('play1');
-    setTimeout(()=> blockQuestion_1.classList.add('none'), 100);
+    setTimeout(()=> page.classList.add('page-play'), 100);
+    setTimeout(()=> page.style.left = '578px', 100);
 
-    setTimeout(()=> page.classList.add('play2'), 200);
-    
+    setTimeout(()=> page.style.zIndex = '0', 100);
 
-    page.classList.remove('none');
-
+    // setTimeout(()=> page.classList.add('transparent'), 1000);
+    setTimeout(()=> blockQuestion_2.classList.add('opacity'), 900);
+    setTimeout(()=> blockQuestion_2.classList.remove('none'), 900);
 }
 
 //item-image page 2
