@@ -9,69 +9,203 @@
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="main background-deck">
-        <div class="books">
-            <div class="books-left start">
-            </div>
-            <div class="books-right start">
-            </div>
-            <div class="video none">
-                <a class="next"><img src="./images/deck/screen_3/skip-2-x-copy-3.png" alt="next"></a>
-                <a class="play"><img src="./images/deck/screen_3/play-2@2x.png" alt="play"></a>
-            </div>
-            <div class="table_close none">
-                <div class="book"></div>
-                <div class="clock">
-                    <p><span data-min="0">00</span>:<span data-sec="0">00</span></p>                
+    <div class="wrapp">
+        <div class="main background-deck">
+            <div id="pageLeft" class="none"></div>
+            <div class="books">
+                <div id="page" class="none"></div>
+
+                <!-- <div class="books-left start">
                 </div>
-            </div>
-            <div class="tabele_open none">
-                <div class="book_open">
-                    <div class="part-left">
-                        <div class="chapter"></div>
-                        <h2>Атопический дерматит</h2>
-                        <h3>Вопрос #1</h3>
-                        <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
-                        <h5>Выберите все изображения пациентов<br>с атопическим дерматитом</h5>
-                        <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
-                        <img class="banana" src="./images/deck/screen_5/banana-wait-2-x@2x.png" alt="banana">
-                        <div class="step"></div>
+                <div class="books-right start">
+                </div>
+                <div class="video none">
+                    <a class="next"><img src="./images/deck/screen_3/skip-2-x-copy-3.png" alt="next"></a>
+                    <a class="play"><img src="./images/deck/screen_3/play-2@2x.png" alt="play"></a>
+                </div> -->
+                <div class="table_close table-screen4">
+                    <div class="book_close"></div>
+                    <div class="clock">
+                        <p><span data-min="0">00</span>:<span data-sec="0">00</span></p>                
                     </div>
-                    <div class="part-right">
-                        <h4>Варианты ответов:</h4>
-                        <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
-                        <div class="answer">
-                            <div class="answer-items">
-                                <div class="answer-item">
-                                    <div class="item-image">
-                                        <img src="./images/deck/screen_5/item/cream@2x.png" alt="">
+                </div>
+                <div class="tabele_open none">
+                    <div class="book_open">
+                        <div class="question_1">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический дерматит</h2>
+                                <h3>Вопрос #1</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Выберите все изображения пациентов<br>с атопическим дерматитом</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="item-image" data-backg="guestion1item1">
+                                                <img src="./images/deck/screen_5/item/cream@2x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">1</div>
+                                        </div>   
+                                        <div class="answer-item correct"> 
+                                            <div class="item-image" data-backg="guestion1item2">
+                                                <img src="./images/deck/screen_5/item/0175@2x.png" alt="">
+                                                <img class="mask2" src="./images/deck/screen_5/mask-2-x-copy-2@3x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">2</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image" data-backg="guestion1item3">
+                                                <img src="./images/deck/screen_5/item/cream-copy@2x.png" alt="">
+                                                <img class="mask3" src="./images/deck/screen_5/mask-3-x@3x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">3</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image" data-backg="guestion1item4">
+                                                <img src="./images/deck/screen_5/item/0175-copy@2x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">4</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image" data-backg="guestion1item5">
+                                                <img src="./images/deck/screen_5/item/cream-copy-2@2x.png" alt="">
+                                                <img class="mask5" src="./images/deck/screen_5/mask-2-x-copy@3x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">5</div>
+                                        </div>
                                     </div>
-                                    <div class="item-image">
-                                        <img src="./images/deck/screen_5/item/0175@2x.png" alt="">
+                                    <div class="answer-btn-question_1">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" class="" id="answer">ответить</span>
+                                        <span data-btn="answer" class="none" id="next">дaлee</span>
                                     </div>
-                                    <div class="item-image">
-                                        <img src="./images/deck/screen_5/item/cream-copy@2x.png" alt="">
-                                    </div>
-                                    <div class="item-image">
-                                        <img src="./images/deck/screen_5/item/0175-copy@2x.png" alt="">
-                                    </div>
-                                    <div class="item-image">
-                                        <img src="./images/deck/screen_5/item/cream-copy-2@2x.png" alt="">
-                                    </div>
+                                </div>
+                                <div class="help">
+                                    <div class="help-mark"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="help">
-                            <div class="help-mark"></div>
+                        <div class="question_2 none">
+                            <!-- <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Аdddddddddd</h2>
+                                <h3>Вопрос #1</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Выберите все изображения пациентов<br>с атопическим дерматитом</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div> -->
+                            <div class="part-right">
+                                <!-- <h4>Варианты ответов:</h4> -->
+                                <!-- <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line"> -->
+                                <div class="answer">
+                                    <!-- <div class="answer-items"> -->
+                                        <!-- <div class="answer-item correct">
+                                            <div class="item-image" data-backg="guestion1item1">
+                                                <img src="" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">1</div>
+                                        </div>   
+                                        <div class="answer-item correct"> 
+                                            <div class="item-image">
+                                                <img src="" alt="">
+                                                <img class="mask2" src="" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">2</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image">
+                                                <img src="" alt="">
+                                                <img class="mask3" src="./images/deck/screen_5/mask-3-x@3x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">3</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image">
+                                                <img src="" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">4</div>
+                                        </div>
+                                        <div class="answer-item">    
+                                            <div class="item-image">
+                                                <img src="" alt="">
+                                                <img class="mask5" src="./images/deck/screen_5/mask-2-x-copy@3x.png" alt="">
+                                                <div class="answer-choose"></div>
+                                                <div class="answer-zoom"></div>
+                                            </div>
+                                            <div class="answer-rama"></div>
+                                            <div class="answer-number">5</div>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="answer-btn-question_2">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer2">ответить</span>
+                                    </div> -->
+
+                                </div>
+                                <!-- <div class="help">
+                                    <div class="help-mark"></div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="clock">
+                        <p data-plus="0" id="timer"><span id="min" data-min="0">00</span>:<span id="sec" data-sec="0">00</span></p>
+                    </div>
+                </div>
+
+                <div class="arm none">
+                    <div class="arm-block">
+                        <div class="arm-block-image">
+                            <div class="hand">
+                            </div>
+                            <div class="hand-img"></div>
+                            <div class="close"></div>
                         </div>
                     </div>
                 </div>
-                <div class="clock">
-                    <p id="timer"><span id="min" data-min="0">00</span>:<span id="sec" data-sec="0">00</span></p>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
