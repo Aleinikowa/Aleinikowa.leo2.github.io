@@ -11,19 +11,7 @@
 <body>
     <div class="wrapp">
         <div class="main background-deck">
-            <div class="books">
-                <div class="back-portal"></div>
-                <div class="book_close_bg"></div>
-                <div id="page" class="none"></div>
-                <div id="pageRight" class="none"></div>
-                <div class="table_close table-screen4">
-                    <div class="book_close"></div>
-                    <div class="clock mainClock">
-                        <p><span data-min="0">00</span>:<span data-sec="0">00</span></p>                
-                    </div>
-                </div>
-                <div class="tabele_open none">
-                    <div class="bg">
+                <div class="tabele_open">
                     <div class="book_open">
                         <div class="question_1">
                             <div class="part-left">
@@ -33,7 +21,6 @@
                                 <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
                                 <h5>Выберите все изображения пациентов<br>с атопическим дерматитом</h5>
                                 <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
-                                <div class="banana"></div>
                                 <div class="step"></div>
                             </div>
                             <div class="part-right">
@@ -93,24 +80,32 @@
                                     <div class="answer-btn-question_1">
                                         <div class="answer-btn-img"></div>
                                         <div class="answer-btn-hover"></div>
-                                        <span data-btn="answer" class="" id="answer">ответить</span>
-                                        <span data-btn="answer" class="none" id="next">дaлee</span>
+                                        <span data-btn="answer" id="answer">ответить</span>
+                                        <span data-btn="next" class="none goToNextQuestion" id="goToQuestion_2">дaлee</span>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="help">
-                                <div class="help-mark"></div>
-                                <!-- <video src="./images/deck/screen_5/q1.mp4" id="q1-video"></video> -->
+                                <div class="help-mark" data-key="q1-video"></div>
+                                <div class="help-close" data-key="q1-video"></div>
                             </div>
+                            <div class="video">
+                                <video src="./images/deck/screen_5/q1.mp4" id="q1-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
                         </div>
                         <div class="question_2 none">
                             <div class="part-left">
                                 <div class="chapter"></div>
-                                <h2>????????????</h2>
-                                <h3>Вопрос #1</h3>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #2</h3>
                                 <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
-                                <h5>Выберите все изображения пациентов<br>с атопическим дерматитом</h5>
+                                <h5>Какие факторы влияют<br>на предрасположенность<br>к атопическому дерматиту?</h5>
                                 <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
                                 <div class="banana"></div>
                                 <div class="step"></div>
@@ -118,84 +113,483 @@
                             <div class="part-right">
                                 <h4>Варианты ответов:</h4>
                                 <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
-                                <div class="answer">
+                                <div class="answer_2">
                                     <div class="answer-items">
                                         <div class="answer-item correct">
-                                            <div class="item-image" data-backg="guestion1item1">
-                                                <img src="./images/deck/screen_5/item/cream@2x.png" alt="">
-                                                <div class="answer-choose"></div>
-                                                <div class="answer-zoom"></div>
-                                            </div>
-                                            <div class="answer-rama"></div>
-                                            <div class="answer-number">1</div>
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Генетические особенности структуры кожи</div>    
+                                            <!-- <div class="answer-rama"></div> -->
                                         </div>   
-                                        <div class="answer-item correct"> 
-                                            <div class="item-image" data-backg="guestion1item2">
-                                                <img src="./images/deck/screen_5/item/0175@2x.png" alt="">
-                                                <img class="mask2" src="./images/deck/screen_5/mask-2-x-copy-2@3x.png" alt="">
-                                                <div class="answer-choose"></div>
-                                                <div class="answer-zoom"></div>
-                                            </div>
-                                            <div class="answer-rama"></div>
-                                            <div class="answer-number">2</div>
-                                        </div>
-                                        <div class="answer-item">    
-                                            <div class="item-image" data-backg="guestion1item3">
-                                                <img src="./images/deck/screen_5/item/cream-copy@2x.png" alt="">
-                                                <img class="mask3" src="./images/deck/screen_5/mask-3-x@3x.png" alt="">
-                                                <div class="answer-choose"></div>
-                                                <div class="answer-zoom"></div>
-                                            </div>
-                                            <div class="answer-rama"></div>
-                                            <div class="answer-number">3</div>
-                                        </div>
-                                        <div class="answer-item">    
-                                            <div class="item-image" data-backg="guestion1item4">
-                                                <img src="./images/deck/screen_5/item/0175-copy@2x.png" alt="">
-                                                <div class="answer-choose"></div>
-                                                <div class="answer-zoom"></div>
-                                            </div>
-                                            <div class="answer-rama"></div>
-                                            <div class="answer-number">4</div>
-                                        </div>
-                                        <div class="answer-item">    
-                                            <div class="item-image" data-backg="guestion1item5">
-                                                <img src="./images/deck/screen_5/item/cream-copy-2@2x.png" alt="">
-                                                <img class="mask5" src="./images/deck/screen_5/mask-2-x-copy@3x.png" alt="">
-                                                <div class="answer-choose"></div>
-                                                <div class="answer-zoom"></div>
-                                            </div>
-                                            <div class="answer-rama"></div>
-                                            <div class="answer-number">5</div>
-                                        </div>
-                                    </div>
-                                    <div class="answer-btn-question_1">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Гиперреактивность иммунитета</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Экологические факторы</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                    </div>     
+                                    <div class="answer-btn-question_2">
                                         <div class="answer-btn-img"></div>
                                         <div class="answer-btn-hover"></div>
-                                        <span data-btn="answer" class="" id="answer">ответить</span>
-                                        <span data-btn="answer" class="none" id="next">дaлee</span>
+                                        <span data-btn="answer"  id="answer_2">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_3">дaлee</span>
                                     </div>
                                 </div>
-                                <div class="help">
-                                    <div class="help-mark"></div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q2-video"></div>
+                                <div class="help-close" data-key="q2-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="./images/deck/screen_6/q2.mp4" id="q2-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
                                 </div>
                             </div>
+                            <div class="video-bg"></div>
                         </div>
-                    </div>
+                        <div class="question_3 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #3</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Какой процент хронических<br>заболеваний кожи осложняется<br>вторичной инфекцией?</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_3">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">0–10%</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">20–30%</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">10–20%</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">4</div>   
+                                            <div class="answer-text">30–40%</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>
+                                    </div>     
+                                    <div class="answer-btn-question_3">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer"  id="answer_3">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_4">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q3-video"></div>
+                                <div class="help-close" data-key="q3-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="" id="q3-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+                        <div class="question_4 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #4</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Какой процент хронических<br>заболеваний кожи осложняется<br>вторичной инфекцией?</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_4">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Стрептококки<br>(Streptococcus<br>pyogenes и др.)</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Стафилококки<br>S. aureus и др.)</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Грибы (Candida spp.,<br> Malassezia spp. и др.)</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                    </div>     
+                                    <div class="answer-btn-question_4">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer_4">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_5">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q4-video"></div>
+                                <div class="help-close" data-key="q4-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="./images/deck/screen_6/q2.mp4" id="q4-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+                        <div class="question_5 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #5</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Рациональной терапией осложнённого<br>бактериальной или грибковой<br>инфекцией атопического дерматита<br>будут:</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_5">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Топические<br>антибиотики</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Ингибиторы<br>кальциневрина</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Топические ГКС</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">4</div>   
+                                            <div class="answer-text">Блокаторы H1-<br>гистаминовых<br>рецепторов</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">5</div>   
+                                            <div class="answer-text">Топические<br>комбинации<br> с антибактериальным,<br> противогрибковым<br> и стероидным <br>противовоспалитель-<br>ным компонентом</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                    </div>     
+                                    <div class="answer-btn-question_5">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer_5">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_6">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q5-video"></div>
+                                <div class="help-close" data-key="q5-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="./images/deck/screen_6/q2.mp4" id="q5-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+                        <div class="question_6 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #6</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Какой топический глюкокортикостероид<br>считается самым безопасным внутри<br>группы ГКС?:</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_6">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Гидрокортизон</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Бетаметазон</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Мометазон</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                       
+                                    </div>     
+                                    <div class="answer-btn-question_6">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer_6">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_7">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q6-video"></div>
+                                <div class="help-close" data-key="q6-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="" id="q6-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+                        <div class="question_7 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #7</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>Какие действующие вещества содержит<br>комбинированное топическое<br>средство, которое можно применять<br>с рождения* для лечения<br>инфицированных дерматозов?</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_7">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Гидрокортизон</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Бетаметазон</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Неомицин</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">4</div>   
+                                            <div class="answer-text">Гентамицин</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">5</div>   
+                                            <div class="answer-text">Клотримазол</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">6</div>   
+                                            <div class="answer-text">Натамицин</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                    </div>     
+                                    <div class="answer-btn-question_7">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer_7">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_8">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q7-video"></div>
+                                <div class="help-close" data-key="q7-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="" id="q7-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+                        <div class="question_8 none">
+                            <div class="part-left">
+                                <div class="chapter"></div>
+                                <h2>Атопический<br>дерматит</h2>
+                                <h3>Вопрос #8</h3>
+                                <img class="line-question" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <h5>У пациента в возрасте 3-х месяцев<br> к высыпаниям атопической природы<br> присоединился инфекционный <br>возбудитель.</h5>
+                                <h5>Какую топическую комбинацию можно<br>использовать?</h5>
+                                <img class="arrow" src="./images/deck/screen_5/arrow-3-3-x@2x.png" alt="arrow">
+                                <div class="banana"></div>
+                                <div class="step"></div>
+                            </div>
+                            <div class="part-right">
+                                <h4>Варианты ответов:</h4>
+                                <img class="line-answer" src="./images/deck/screen_5/line-1-3-x@2x.png" alt="line">
+                                <div class="answer_8">
+                                    <div class="answer-items">
+                                        <div class="answer-item correct">
+                                            <div class="answer-number">1</div>   
+                                            <div class="answer-text">Тридерм®</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>   
+                                        <div class="answer-item">
+                                            <div class="answer-number">2</div>   
+                                            <div class="answer-text">Акридерм® ГК</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div>  
+                                        <div class="answer-item">
+                                            <div class="answer-number">3</div>   
+                                            <div class="answer-text">Пимафукорт®</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                        <div class="answer-item">
+                                            <div class="answer-number">4</div>   
+                                            <div class="answer-text">Кандидерм®</div>    
+                                            <!-- <div class="answer-rama"></div> -->
+                                        </div> 
+                                    </div>     
+                                    <div class="answer-btn-question_8">
+                                        <div class="answer-btn-img"></div>
+                                        <div class="answer-btn-hover"></div>
+                                        <span data-btn="answer" id="answer_8">ответить</span>
+                                        <span data-btn="next" class="goToNextQuestion none" id="goToQuestion_9">дaлee</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help">
+                                <div class="help-mark" data-key="q8-video"></div>
+                                <div class="help-close" data-key="q8-video"></div>
+                            </div>
+                            <div class="video">
+                                <video src="" id="q8-video"></video>
+                                <div class="name">
+                                    <b>Н. Н. Мурашкин</b>
+                                    <p>детский дерматолог,</p>
+                                    <p>д. м. н., профессор</p>
+                                </div>
+                            </div>
+                            <div class="video-bg"></div>
+                        </div>
+
+                        <div id="banana"></div>
+                        <div id="plusTime"><p>+ 2 мин</p></div>
+                    </div>    
                     <div class="clock">
                         <p data-plus="0" id="timer"><span id="min" data-min="0">00</span>:<span id="sec" data-sec="0">00</span></p>
                     </div>
+                </div>
+                <div class="blockEndQuestions none">
+                    <div class="time">
+                        <p class="time-text">00:00</p>
+                    </div>
+                    <div class="text">
+                        <p class="yellow">ваше</p>
+                        <p class="black">время</p>
+                        <p id="end-time"></p>
+                        <p class="result">Желаете увидеть свой результат<br>в турнирной таблице? Пожалуйста,<br> авторизуйтесь или пройдите регистрацию,<br> если вы здесь впервые</p>
+                    </div>
+                    <div class="form">
+                        <a class="registration" href="#">Регистрация</a>
+                        <form action="" method="post">
+                            <input class="input" type="text" name="mail" placeholder="почта">
+                            <input class="input" type="password" name="password" placeholder="пароль">
+                            <input class="submit" type="submit" value="Войти">
+                          </form>
+                          <a class="password" href="#">Забыли пароль?</a>
                     </div>
                 </div>
                 <div class="arm none">
                     <div class="arm-block">
                         <div class="arm-block-image">
-                            <div class="hand">
-                            </div>
+                            <div class="hand"></div>
                             <div class="hand-img"></div>
                             <div class="close"></div>
                         </div>
                     </div>
+                </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="footer-content">
+            <div id="footer-company">
+                ООО «Лео Фармасьютикал Продактс»:<br>
+                Россия, 125315, Москва, Лениндрадский пр., д. 72, корп. 2;<br>
+                тел.: +7 (495) 789 1160; info.ru@leo-pharma.com; www.leo-pharma.com<br>
+                MAT-17984-06-2018
+            </div>
+            <div id="footer-company-info">
+                Информация, размещенная на сайте, предназначена только для специалистов<br>
+                с медицинским или фармацевтическим образованием и может быть использована только<br>
+                в профессиональной деятельности.
+            </div>
+            <div id="footer-pn">
+                П N011114/02, П N011114/03.<br>
+                П N012689/01, П N012689/02
+            </div>
+            <div id="footer-right">
+                <div class="footer-right-links">
+                    <a href="#">
+                        Правила участия
+                    </a>
+                    <a href="#">
+                        Политика конфиденциальности
+                    </a>
+                </div>
+                <div class="footer-right-links">
+                    <a href="#">
+                        Инструкция по применению<br> Фуцидин
+                    </a>
+                    <a href="#">
+                        Инструкция по применению<br> Пимафукорт
+                    </a>
+                    <a href="#" class="breffi-link">
+                        <img src="img/breffi.png" alt="" width="114">
+                    </a>
                 </div>
             </div>
         </div>

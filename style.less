@@ -3,121 +3,47 @@
     padding: 0;
 }
 
-#page {
-    width: 412px;
-    height: 100%;
-    // height: 100%;
-    position: absolute;
-    left: 557px;
-    top: 82px;
-    transform-origin: 0 0;
-    opacity: 1;
-    // position: relative;
-    // right: 0;
-    // left: 172px;
-    // top: -7px;
-    z-index: 1;
-    background: url(images/deck/screen_5/spreads-2-x@2x_left.png) no-repeat;
-    // background-position-x: -100%;
-    transform: rotateY(0deg);
-    transition-duration: 0s;
-    // transform-origin: -100% 50% !important;
-}
-#pageRight {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 559px;
-    top: 94px;
-    // z-index: 333;
-    background: url(./images/deck/screen_5/spreads-2-x@2x_right.png) no-repeat;
-}
-
-.book_close_bg {
-    position: absolute;
-    right: 210px;
-    top: 88px;
-    transform: rotateY(0);
-    transition-duration: 0;
-    transform-origin: 0 0;
-    width: 430px;
-    z-index: 3;
-    opacity: 1;
-    height: 590px;
+.btn-yellow() {
+    position: relative;
+    display: block;
+    margin-top: 15px;
+    width: 201px;
+    height: 37px;
     cursor: pointer;
-    // transition: 0.3s;
-    background-size: 104%;
-    background: url(./images/deck/screen_4/book-q-2-2-x@2x.png) no-repeat center center;
-}
-
-.book_close_bg:hover {
-    transform: scale(1.3s) !important;
-}
-
-.back-portal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition-duration: 0;
-    opacity: 0;
-    background: url(./images/deck/screen_5/portal@2x.png) no-repeat center center;
-}
-
-.width {
-    width: 0 !important;
-}
-// .play {
-//     width: 100px !important;
-//     height: 100%;
-//     position: absolute;
-//     transition-duration: 0s;
-//     transition-delay: 0s;
-//     transform: rotateY(0deg);
-//     z-index: 100;
-//     left: 172px;
-//     top: 87px;
-//     height: 100%;
-//     width: 100%;
-//     background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat;
-// }
-// .scale {
-//     transform: scale(0);
-//     transition-duration: 1s;
-// }
-// .play2 {
-//     width: 100% !important;
-//     height: 100%;
-//     position: absolute;
-//     right: 202px;
-//     top: 92px;
-//     transition-duration: 1.3s;
-//     transition-delay: 0s;
-//     transform: rotateY(-180deg);
-//     z-index: 1;
-//     background: url(images/deck/screen_5/spreads-2-x@2x.png) no-repeat;
-// }
-.page-play {
-    transform: rotateY(-180deg) !important;
-    transition-duration: 1s !important;
-    width: 574px !important;
-    // transform-origin: -100% 50% !important;
-}
-.book-play {
-    transform: rotateY(-180deg) !important;
-    transition-duration: 1.3s !important;
-    // position: relative;
-    // z-index: 0;
-    // transform-origin: -100% 50% !important;
-    //transform: rotate(45deg) !important;
-}
-.book-opasity {
-    // background-image: none !important;
-    opacity: 0 !important;
-    transition-duration: 1s !important;
-
-}
-.book-transform {
-    right: 400px !important;
+    .answer-btn-img {
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0;
+        width: 201px;
+        height: 37px;
+        background: url(./images/deck/screen_5/next_h.png) no-repeat 50% 50%;
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+    .answer-btn-hover {
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0;
+        width: 201px;
+        height: 37px;
+        background: url(./images/deck/screen_5/next.png) no-repeat 50% 50%;
+        background-size: 100% 100%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    span {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        color: #000;
+        width: 100%;
+        text-align: center;
+        line-height: 34px;
+        font-size: 18px;
+        font-weight: 600;
+    }
 }
 
 .none {
@@ -128,34 +54,18 @@
     display: flex;
 }
 
-.background-deck {
-    background: url(./images/deck/table-2-x@3x.png) no-repeat ;
-}
-
-.story-screen3 {
-    background: url(./images/deck/screen_3/back-room-ok-empty@2x.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.table-screen4 {
-    background: url(./images/deck/screen_4/book-close@3x.png) no-repeat center center;
-    background-size: cover;
-}
-
-.table-screen5 {
-    background-size: 30%;
-
-}
-
-.transparent {
-    transition-duration: 1.4s !important;
-    opacity: 0 !important;
-    // left: 578px !important;
-}
-
 .opacity {
     transition-duration: 1s !important;
     opacity: 1 !important;
+}
+
+.time_plus {
+    transition-duration: 1s !important;
+    transform: translateY(-50px) !important;
+}
+
+.help_video {
+    clip-path: polygon(0% 100%, 100% 400%, 100% 375px, calc(100% - 375px) 0%, 0% 0%)
 }
 
 .answer_number_active {
@@ -169,72 +79,39 @@
 }
 
 .wrapp {
-    position: relative;
-    display: block;
     width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url(./images/deck/frame-1440-x-1100@2x.png) no-repeat 50% 50%;
-    background-size: 1451px 1113px;
-    min-height: 850px;
-}
-
-.main {
-    position: absolute;
-    display: block;
-    width: 1200px;
-    height: 750px;
-    left: 50%;
-    margin-left: -600px;
-    top: 50%;
-    margin-top: -375px;
+    height: 820px;
     overflow: hidden;
-    .books {
-        height: 100%;
-        width: 100%;
-        // background-position: 175px 92px;
-        // background: url(./images/deck/screen_5/spreads-2-x@2x.png) no-repeat center center;
-    }
-    .table_close {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        padding-right: 70px;
-        width: 100%;
-        height: 100%;
-        .clock {
-            align-items: flex-end;
-        }
-
-    }
-    .tabele_open {
-        width: 1200px; 
-        height: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        // padding-right: 50px;
-        // background: url(./images/deck/screen_5/portal@3x.png) !important;
-        // background-size: cover;
-        .bg {
-            display: flex;
-            // opacity: 0;
-            // transition-duration: 0;
+    background: url(./images/deck/frame-1440-x-1100@2x.png) no-repeat 53% center;
+    .main {
+        position: relative;
+        left: 27px;
+        top: 35px;
+        width: 1200px;
+        height: 750px;
+        overflow: hidden;
+        .tabele_open {
             width: 100%;
             height: 100%;
+            display: flex;
+            background: url(./images/deck/table-2-x@3x.png) no-repeat center center;
             .book_open {
                 position: relative;
-                left: 152px;
+                left: 123px;
                 top: 93px;
                 width: 830px;
                 height: 565px;
                 z-index: 1;
                 background: url(./images/deck/screen_5/spreads-2-x@2x.png) no-repeat center center;
-                // transform: scale(0.6);
-                // transition-duration: 0s;
-                .question_1, .question_2 {
-                    opacity: 0;
+                .question_1, 
+                .question_2, 
+                .question_3,
+                .question_4,
+                .question_5,
+                .question_6,
+                .question_7,
+                .question_8 {
+                    // opacity: 0;
                     transition-duration: 0;
                     display: flex;
                     .part-left {
@@ -260,17 +137,6 @@
                             display: block;
                             left: 245px;
                         }
-                        .banana {
-                            position: absolute;
-                            display: block;
-                            left: 190px;
-                            top: 380px;
-                            width: 201px;
-                            height: 151px;
-                            background-size: 100% !important;
-                            background-position-y: bottom !important;
-                            background: url(./images/deck/screen_5/question_monkey_d.png) no-repeat center;
-                        }
                         .step {
                             position: absolute;
                             display: block;
@@ -285,6 +151,7 @@
                     .part-right {
                         position: relative;
                         width: 50%;
+                        z-index: 5;
                         .line-answer {
                             position: relative;
                             top: 125px ;
@@ -294,7 +161,7 @@
                             top: 130px;
                             left: 40px;
                         }
-                        .answer {
+                        .answer, .answer_2, .answer_3 {
                             width: 100%;
                             height: 300px;
                             position: relative;
@@ -398,48 +265,8 @@
                                 }
                             }
                             &-btn-question_1 {
-                                position: relative;
-                                display: block;
+                                .btn-yellow();
                                 left: 145px;
-                                margin-top: 15px;
-                                width: 201px;
-                                height: 37px;
-                                cursor: pointer;
-                                .answer-btn-img {
-                                    position: absolute;
-                                    display: block;
-                                    left: 0px;
-                                    top: 0;
-                                    width: 201px;
-                                    height: 37px;
-                                    background: url(./images/deck/screen_5/next_h.png) no-repeat 50% 50%;
-                                    background-size: 100% 100%;
-                                    opacity: 1;
-                                }
-                                .answer-btn-hover {
-                                    position: absolute;
-                                    display: block;
-                                    left: 0px;
-                                    top: 0;
-                                    width: 201px;
-                                    height: 37px;
-                                    background: url(./images/deck/screen_5/next.png) no-repeat 50% 50%;
-                                    background-size: 100% 100%;
-                                    opacity: 0;
-                                    transition: 0.3s;
-                                }
-                                span {
-                                    position: absolute;
-                                    display: block;
-                                    z-index: 1;
-                                    color: #000;
-                                    width: 100%;
-                                    text-align: center;
-                                    line-height: 34px;
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                }
-                                
                             }
                             .answer-btn-question_1:hover {
                                 .answer-btn-img {
@@ -456,9 +283,8 @@
                     }
                     .help-mark-active {
                         background-image: url(./images/deck/screen_5/help_mask.png) !important;
-
                     }
-                    #q1-video {
+                    #q1-video, #q2-video, #q3-video, #q4-video, #q5-video {
                         position: absolute;
                         display: block;
                         right: 0;
@@ -482,7 +308,7 @@
                         transition: all 500ms ease-in-out;
                         background-size: 100% 100%;
                         pointer-events: painted;
-                        z-index: 2;
+                        z-index: 10;
                         &-mark {
                             position: absolute;
                             display: block;
@@ -496,151 +322,738 @@
                             background-size: 100% 100%;
                             cursor: pointer;
                         }
+                        &-close {
+                            position: absolute;
+                            display: block;
+                            width: 53px;
+                            height: 43px;
+                            left: 106px;
+                            bottom: 106px;
+                            cursor: pointer;
+                            background-position-x: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            opacity: 0;
+                            transition: all 200ms linear;
+                            pointer-events: all;
+                            background-image: url(./images/deck/screen_5/close_help.png);
+                        }
+                    }
+                    .video {
+                        position: absolute;
+                        display: block;
+                        right: 14px;
+                        top: 10px;
+                        width: 400px;
+                        height: 360px;
+                        z-index: 4;
+                        opacity: 0;
+                        background-color: white;
+                        // background-image: url(./images/deck/screen_5/help_mask_w.png) ;
+                        .name {
+                            position: absolute;
+                            display: block;
+                            right: 14px;
+                            top: 172px;
+                            font-size: 10px;
+                            line-height: 13px;
+                            text-align: right;     
+                            z-index: 2;            
+                        }
+                    }
+                    .video-bg {
+                        position: absolute;
+                        display: block;
+                        right: 14px;
+                        top: 10px;
+                        width: 400px;
+                        height: 360px;
+                        background-image: url(./images/deck/screen_5/help_mask.png);
+                        z-index: 4;
+                        background-size: 100%;
+                        opacity: 0;
+                    }  
+                }    
+                .question_2 {
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step2.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    }
+                    .part-right {
+                        .answer {
+                            &-items {
+                                display: flex;
+                                flex-direction: column;
+                                .answer-item {
+                                    width: 300px;
+                                    height: 50px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    .answer-text {
+                                        position: absolute;
+                                        top: 15px;
+                                        left: 20px;
+                                        font-family: Roboto;
+                                        font-size: 12px;
+                                        font-weight: normal;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: normal;
+                                        letter-spacing: normal;
+                                        color: #000000;
+                                    }
+                                    
+                                }
+                            }
+                            &-btn-question_2 {
+                                position: absolute;
+                                bottom: -140px;
+                                left: 140px;
+                                .btn-yellow();
+                            }
+                        }
                     }
                 }
-    
-            }
-        }
-        h2 {
-            position: relative;
-            display: block;
-            font-size: 26px;
-            line-height: 28px;
-            color: #000;
-            left: 107px;
-            font-family: 'Pattaya', sans-serif;
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-        h3 {
-            position: relative;
-            display: block;
-            font-size: 18px;
-            line-height: 19px;
-            font-weight: 600;
-            color: #000;
-            left: 107px;
-            white-space: nowrap;
-            margin-bottom: 10px;
-        }
-        h4 {
-            position: relative;
-            display: block;
-            font-size: 12px;
-            line-height: 14px;
-            font-weight: 600;
-            color: #000;
-            white-space: nowrap;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        h5 {
-            position: relative;
-            display: block;
-            font-size: 14px;
-            line-height: 22px;
-            color: #000;
-            left: 107px;
-            white-space: nowrap;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 300px;
-        }
-    }        
-    .mainClock {
-        left: 0 !important;
-    }
-    .clock {
-        width: 200px;
-        height: 590px;
-        bottom: 0;
-        left: 200px;
-        align-self: flex-end;
-        position: relative;
-        background: url(./images/deck/screen_4/watch-2-x@2x.png) no-repeat bottom center;
-        p {
-            font-family: a_LCDNova;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-            position: absolute;
-            top: 341px;
-            left: 43px;
-        }
-    }
-    .arm {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        // background: rgba(255,255,255,0);
-        left: 0;
-        top: 0;
-        visibility: visible;
-        background: rgba(255,255,255,0.7);
-        // visibility: hidden;
-        z-index: 100;
-        transition: all 300ms linear;
-        // .zoom {
-        //     bottom: 0;
-        //     transform: rotate(-45deg);
-        // }
-        &-block {
-            position: absolute;
-            display: block;
-            width: 738px;
-            height: 554px;
-            left: 399px;
-            // bottom: 0;
-            bottom: -554px;
-            transform: rotate(-45deg);
-            transition: all 800ms ease-out;
-            &-image {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                transition: all 300ms linear;
-                .hand {
+                .question_3 {
+                    .part-right {
+                        .answer_3 {
+                            position: relative;
+                            top: 160px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 50px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_3 {
+                                position: absolute;
+                                bottom: -155px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step3.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    }   
+                    
+                }
+                .question_4  {
+                    .part-right {
+                        .answer_4 {
+                            position: relative;
+                            top: 160px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 90px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_4 {
+                                position: absolute;
+                                bottom: -85px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step4.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    } 
+                }
+                .question_5  {
+                    .part-right {
+                        .answer_5 {
+                            position: relative;
+                            top: 150px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 60px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_5 {
+                                position: absolute;
+                                bottom: -85px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step5.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    } 
+                }
+                .question_6  {
+                    .part-right {
+                        .answer_6 {
+                            position: relative;
+                            top: 150px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 60px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_6 {
+                                position: absolute;
+                                bottom: -155px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step6.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    } 
+                }
+                .question_7  {
+                    .part-right {
+                        .answer_7 {
+                            position: relative;
+                            top: 150px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 60px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_7 {
+                                position: absolute;
+                                bottom: -85px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step7.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    } 
+                }
+                .question_8  {
+                    .part-right {
+                        .answer_8 {
+                            position: relative;
+                            top: 150px;
+                            left: 75px;
+                            .answer-items {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .answer-item  {
+                                    width: 180px;
+                                    height: 60px;
+                                    cursor: pointer;
+                                    .answer-number {
+                                        left: -36px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                            .answer-btn-question_8 {
+                                position: absolute;
+                                bottom: -155px;
+                                left: 100px;
+                                .btn-yellow();
+                            }
+                        }
+                    }
+                    .part-left {
+                        .step {
+                            position: absolute;
+                            display: block;
+                            left: 29px;
+                            top: 235px;
+                            width: 70px;
+                            height: 286px;
+                            background: url(./images/deck/step/step8.png) no-repeat; 
+                            background-size: contain;
+                        }
+                    } 
+                }
+                #banana {
                     position: absolute;
                     display: block;
+                    left: 190px;
+                    top: 380px;
+                    width: 201px;
+                    height: 151px;
+                    background-size: 100% !important;
+                    background-position-y: bottom !important;
+                    background: url(./images/deck/screen_5/question_monkey_d.png) no-repeat center;
+                }
+                #plusTime {
+                    position: absolute;
+                    display: block;
+                    right: -180px;
+                    top: 100px;
+                    width: 80px;
+                    height: 40px;
+                    background-color: #f6cf4f;
+                    z-index: 100;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition-duration: 0s;
+                    transform: translateY(0);
+                    opacity: 0;
+                }
+            }
+            h2 {
+                position: relative;
+                display: block;
+                font-size: 26px;
+                line-height: 28px;
+                color: #000;
+                left: 107px;
+                font-family: 'Pattaya', sans-serif;
+                margin-top: 50px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                position: relative;
+                display: block;
+                font-size: 18px;
+                line-height: 19px;
+                font-weight: 600;
+                color: #000;
+                left: 107px;
+                white-space: nowrap;
+                margin-bottom: 10px;
+            }
+            h4 {
+                position: relative;
+                display: block;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 600;
+                color: #000;
+                white-space: nowrap;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+            h5 {
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 22px;
+                color: #000;
+                left: 107px;
+                white-space: nowrap;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-weight: 300px;
+            }
+        }    
+        .blockEndQuestions {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url(./images/deck/time-registration@3x.jpg) no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .time {
+                width: 200px;
+                height: 100%;
+                background: url(./images/deck/screen_end/watch-2-x@2x.png) no-repeat;
+                background-position-y: bottom;
+                position: relative;
+                &-text {
+                    position: absolute;
+                    top: 501px;
+                    left: 61px;
+                    font-family: a_LCDNova;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #000000;
+                }
+            }
+            .text {
+                width: 200px;
+                height: 100%;
+                position: relative;
+                .yellow {
+                    position: absolute;
+                    top: 220px;
+                    left: -150px;
+                    font-family: Pattaya;
+                    font-size: 55px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 0.31;
+                    letter-spacing: normal;
+                    color: #f5d02a;
+                }
+                .black {
+                    position: absolute;
+                    top: 233px;
+                    left: -150px;
+                    font-family: Pattaya;
+                    font-size: 15px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.08;
+                    letter-spacing: normal;
+                    color: #000000;
+                }
+                #end-time {
+                    position: absolute;
+                    top: 300px;
+                    left: -128px;
+                    font-family: a_LCDNova;
+                    font-size: 32px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #000000;
+                }
+                .result {
+                    position: absolute;
+                    top: 400px;
+                    left: -150px;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: italic;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #000000;
+                  
+                }
+            }
+            .form {
+                width: 400px;
+                height: 100%;
+                position: relative;
+                form {
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    left: -80px;
+                    top: 230px;
+                    margin: 0 auto;
+                    text-align: center;
+                    .input {
+                        margin: 0 auto 10px;
+                        text-align: center;
+                        padding: 6px 67.5px;
+                        border: solid 1px #979797;
+                        background-color: #ffffff;
+                        display: block;
+                    }
+                    .submit {
+                        display: block;
+                        margin: 60px auto 0;
+                        width: 201px;
+                        height: 37px;
+                        background: url(./images/deck/screen_5/next_h.png) no-repeat 50% 50%;
+                        background-size: 100% 100%;
+                        border: none;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: center;
+                        color: #000000;
+                    }
+                    .submit:hover {
+                        background: url(./images/deck/screen_5/next.png) no-repeat 50% 50%;
+                        background-size: 100% 100%;
+                        color: white;
+                    }
+                }
+                .registration {
+                    position: absolute;
+                    left: 118px;
+                    top: 185px;  font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #4a4a4a;
+                }
+                .password {
+                    position: absolute;
+                    left: 91px;
+                    top: 315px; 
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #4a4a4a;
+                }
+            }
+        }    
+        .mainClock {
+            left: 0 !important;
+        }
+        .clock {
+            width: 200px;
+            height: 590px;
+            bottom: 0;
+            left: 200px;
+            align-self: flex-end;
+            position: relative;
+            background: url(./images/deck/screen_4/watch-2-x@2x.png) no-repeat bottom center;
+            p {
+                font-family: a_LCDNova;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+                position: absolute;
+                top: 341px;
+                left: 43px;
+            }
+        }
+        .arm {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            visibility: visible;
+            background: rgba(255,255,255,0.7);
+            z-index: 100;
+            transition: all 300ms linear;
+            &-block {
+                position: absolute;
+                display: block;
+                width: 738px;
+                height: 554px;
+                left: 399px;
+                bottom: -554px;
+                transform: rotate(-45deg);
+                transition: all 800ms ease-out;
+                &-image {
+                    position: relative;
                     width: 100%;
                     height: 100%;
-                    background: url(./images/deck/arm/arm.png) no-repeat center bottom;
-                    background-size: 100% 100%;
-                    left: 0;
-                    top: 0;
                     transition: all 300ms linear;
-                    z-index: 2;
-                }
-                .hand-img {
-                    position: absolute;
-                    display: block;
-                    width: 364px;
-                    height: 362px;
-                    background-position-x: center !important;
-                    background-position-y: center !important;
-                    background-size: cover !important;
-                    left: 23px;
-                    top: 17px;
-                    z-index: 1;
-                }
-                .close {
-                    position: absolute;
-                    display: block;
-                    width: 50px;
-                    height: 43px;
-                    background: url(./images/deck/arm/close_hand.png) no-repeat 50% 50%;
-                    background-size: 100% 100%;
-                    left: 404px;
-                    top: 6px;
-                    cursor: pointer;
-                    transition: all 300ms linear;
-                    z-index: 5;
+                    .hand {
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: url(./images/deck/arm/arm.png) no-repeat center bottom;
+                        background-size: 100% 100%;
+                        left: 0;
+                        top: 0;
+                        transition: all 300ms linear;
+                        z-index: 2;
+                    }
+                    .hand-img {
+                        position: absolute;
+                        display: block;
+                        width: 364px;
+                        height: 362px;
+                        background-position-x: center !important;
+                        background-position-y: center !important;
+                        background-size: cover !important;
+                        left: 23px;
+                        top: 17px;
+                        z-index: 1;
+                    }
+                    .close {
+                        position: absolute;
+                        display: block;
+                        width: 50px;
+                        height: 43px;
+                        background: url(./images/deck/arm/close_hand.png) no-repeat 50% 50%;
+                        background-size: 100% 100%;
+                        left: 404px;
+                        top: 6px;
+                        cursor: pointer;
+                        transition: all 300ms linear;
+                        z-index: 5;
+                    }
                 }
             }
         }
     }
+}
+#footer{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 270px;
+    background: #000000;
+}
+#footer-content{
+    position: relative;
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+}
+#footer-company{
+    position: relative;
+    display: block;
+    padding-left: 114px;
+    background: url(./images/deck/leon.svg) no-repeat 0 0%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 300;
+    top: 30px;
+}
+#footer-company-info{
+    margin-top: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 300;
+}
+#footer-pn{
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+#footer-right{
+    position: absolute;
+    display: block;
+    top: 30px;
+    right: 0px;
+    text-align: right;
+}
+.footer-right-links{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap;
+    margin-left: 54px;;
+}
+.footer-right-links a{
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    color: #F5D02A;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;;
+}
+.footer-right-links a.breffi-link{
+    position: relative;
+    display: block;
+    margin-top: 85px;
 }
